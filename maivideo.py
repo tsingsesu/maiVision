@@ -8,11 +8,11 @@ while True:
     ret, frame = capture.read()
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  #灰度用来检测
-    faces = face_detector.detectMultiScale(gray)
+    faces = face_detector.detectMultiScale(gray ,1.05,10)
 
     for (x,y,w,h) in faces:
         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
-
+        cv2.putText(frame, 'Face', (x , y - 10) , 0 , 1 , (255, 255, 255), 2)
     cv2.imshow('video', frame)
 
     key = cv2.waitKey(1)
@@ -20,4 +20,3 @@ while True:
         break
 capture.release()
 cv2.destroyAllWindows()
-
