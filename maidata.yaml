@@ -1,0 +1,5 @@
+path : C:\Users\lhl87\Desktop\yolo_train
+train : images/train_aug
+val : images/val
+names:
+  0: aoliao_heiqiao
