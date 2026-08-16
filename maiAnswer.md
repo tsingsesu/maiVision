@@ -43,3 +43,4 @@ maitrain.py 训练模型
 maivideo.py和cam_detect.py下一步合成最终识别窗口代码
 
 ## chapter 2
+
