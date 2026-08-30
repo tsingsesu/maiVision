@@ -9,7 +9,7 @@ from ultralytics import YOLO
 import cv2
 
 # 加载预训练模型（第一次运行会自动下载 yolov8n.pt，约 6MB）
-model = YOLO('yolov8n.pt')
+model = YOLO('yolov8s.pt')
 
 # 打开摄像头（0 = 内置摄像头）
 cap = cv2.VideoCapture(0)

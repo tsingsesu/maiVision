@@ -24,7 +24,7 @@ while True:
         break
 
     # 推理：把当前帧送给 YOLO，得到检测结果
-    results = model.predict(frame, conf=0.6, verbose=False)
+    results = model.predict(frame, conf=0.8, verbose=False)
     'model.predict找出目标，frame源，conf可信度，verbose打印日志'
     'result结果是个列表，可用print(type(result))验证，而且长度是1'
 
