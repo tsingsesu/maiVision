@@ -2,14 +2,14 @@
 """
 cam_detect.py —— 摄像头实时目标检测
 
-用预训练 YOLOv8n 模型（COCO 80类）检测摄像头画面里的物体
+用预训练 YOLOv8n 模型（COCO 80类）检测摄像头画面里的物体->YOLOv8s
 按 q 退出
 """
 from ultralytics import YOLO
 import cv2
 
 # 加载预训练模型（第一次运行会自动下载 yolov8n.pt，约 6MB）
-model = YOLO(r'runs/detect/train_v5/weights/best.pt')
+model = YOLO(r'runs/detect/train-3/weights/best.pt')#记得修改训练模型
 'YOLO(模型地址)，r:地址内的反斜杠不会用作转义字符，地址：字符串，从这个代码运行的这一层开始写'
 # 打开摄像头（0 = 内置摄像头）
 cap = cv2.VideoCapture(0)
@@ -24,7 +24,7 @@ while True:
         break
 
     # 推理：把当前帧送给 YOLO，得到检测结果
-    results = model.predict(frame, conf=0.8, verbose=False)
+    results = model.predict(frame, conf=0.6, verbose=False)
     'model.predict找出目标，frame源，conf可信度，verbose打印日志'
     'result结果是个列表，可用print(type(result))验证，而且长度是1'
 
