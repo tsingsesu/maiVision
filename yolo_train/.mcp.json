@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zhipu-vision": {
+      "command": "E:\\Cursor\\resources\\app\\resources\\helpers\\node.exe",
+      "args": ["E:\\Claude_deepseek visual\\mcp-vision-server.js"]
+    }
+  }
+}
